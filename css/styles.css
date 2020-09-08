@@ -1,0 +1,76 @@
+/*************** 
+ * BASE STYLES *
+ ***************/
+
+/* Overwrite browser defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Variables */
+:root {
+  --background-green: #009688;
+  --background-beige: #d7dbd6;
+}
+
+/************* 
+ * MAIN GRID *
+ *************/
+.grid {
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 12.8rem 1fr;
+}
+
+/****************** 
+ * APP BACKGROUND *
+ ******************/
+.top {
+  background: var(--background-green);
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.bottom {
+  background: var(--background-beige);
+  grid-column: 1 /-1;
+  grid-row: 2 / -1;
+}
+
+/*******
+ * APP *
+ *******/
+
+.app {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column: 1/ -1;
+  grid-row: 1 / -1;
+  margin: 2rem 7rem;
+}
+
+.sidebar {
+  grid-column: 1 / 4;
+  background: red;
+}
+
+.main {
+  grid-column: 4 / -1;
+  background: blue;
+}
