@@ -22,11 +22,18 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Variables */
 :root {
   --background-green: #009688;
   --background-beige: #d7dbd6;
   --sidebar-header: #ededed;
+  --notifications-text-color: rgba(48, 48, 48, 0.96);
+  --notifications-link-color: rgba(48, 48, 48, 0.85);
 }
 
 /************* 
@@ -60,7 +67,7 @@ body {
 
 .app {
   display: grid;
-  grid-template-columns: 44rem 1fr;
+  grid-template-columns: 42rem 1fr;
   grid-column: 1 / -1;
   grid-row: 1 / -1;
   width: 139.6rem;
@@ -75,12 +82,17 @@ body {
   background: red;
 }
 
+/* Styles in common */
+.sidebar-header,
+.sidebar-notifications {
+  padding: 0 2rem;
+}
+
 .sidebar-header {
   background: var(--sidebar-header);
   display: flex;
   justify-content: space-between;
   height: 6rem;
-  padding: 0 2rem;
 }
 
 /* Profile image */
@@ -98,6 +110,38 @@ body {
 /* Selects the icon in the center */
 .sidebar-header-icons img:nth-child(2) {
   margin: 0 3rem;
+}
+
+/* Sidebar notifications */
+.sidebar-notifications {
+  display: flex;
+  align-items: center;
+  background: #9de1fe;
+  height: 9rem;
+}
+
+.sidebar-notifications > img {
+  margin-right: 2rem;
+}
+
+.sidebar-notifications-message {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.sidebar-notifications-message span {
+  font-size: 1.6rem;
+  color: var(--notifications-text-color);
+}
+
+.sidebar-notifications-message a {
+  font-size: 1.4rem;
+  color: var(--notifications-link-color);
+}
+
+.sidebar-notifications-message a:hover {
+  text-decoration: underline;
 }
 
 /********
