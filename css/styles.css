@@ -34,6 +34,10 @@ a {
   --sidebar-header: #ededed;
   --notifications-text-color: rgba(48, 48, 48, 0.96);
   --notifications-link-color: rgba(48, 48, 48, 0.85);
+  --notifications-background-color: #9de1fe;
+  --search-bar-bg: #f6f6f6;
+  --search-bar-input-bg: #ffffff;
+  --search-bar-input-placeholder: #919191;
 }
 
 /************* 
@@ -116,7 +120,7 @@ a {
 .sidebar-notifications {
   display: flex;
   align-items: center;
-  background: #9de1fe;
+  background: var(--notifications-background-color);
   height: 9rem;
 }
 
@@ -140,8 +144,46 @@ a {
   color: var(--notifications-link-color);
 }
 
+.sidebar-notifications-message img {
+  vertical-align: middle;
+}
+
 .sidebar-notifications-message a:hover {
   text-decoration: underline;
+}
+
+/* Search chat */
+.search-chat {
+  background: var(--search-bar-bg);
+}
+
+.search-bar {
+  display: flex;
+  padding: 1rem;
+}
+
+/* Selects the search icon */
+.search-bar > img {
+  width: 2.8rem;
+  background: var(--search-bar-input-bg);
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  padding-left: 1rem;
+}
+
+/* Search input */
+.search-bar input {
+  outline: none;
+  border: none;
+  padding: 1rem 1rem 1rem 2rem;
+  flex: 1;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  font-family: "Segoe UI";
+}
+
+.search-bar input::placeholder {
+  color: var(--search-bar-input-placeholder);
 }
 
 /********
