@@ -1,7 +1,5 @@
 # WhatsApp web clone (UI)
 
-## Description
-
 This is a clone of WhatsApp web using HTML and CSS (Grid and Flexbox).
 
 ![WhatsApp web user interface](./screenshot.png)
